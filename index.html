@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Crud system</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/crud.css">
+    </head>
+    <body>
+        
+        <div class="container mt-3 w-50 shadow-lg">
+            <h1>CRUD System</h1>
+            <label >product name:</label>
+            <input onblur="vaildation();" id="pname" type="text" class="form-control mb-3">
+
+            <label >product category:</label>
+            <input  id="pcategory" type="text" class="form-control mb-3">
+
+            <label > product price:</label>
+            <input id="pprice" type="text" class="form-control mb-3">
+
+            <label >product Descrabtion</label>
+            <textarea id="pdescrabtion" class="form-control  mb-3"></textarea>
+
+            <button onclick="addProduct()" class="btn btn-info mt-3">Add Product</button>
+
+
+        </div>
+        <input id="searchInp" onkeyup="search();" class="form-control w-25 mx-auto mt-3" placeholder="search....">
+       
+        <table class="table  mx-auto w-50 mt-5 " >
+            <thead>
+                <tr>
+                    <th>index</th>
+                    <th>name</th>
+                    <th>category</th>
+                    <th>price</th>
+                    <th>descrabtion</th>
+                    <th>update</th>
+                    <th>delet</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <tr>
+                    <td>0</td>
+                    <td>samsung</td>
+                    <td>phone</td>
+                    <td>2000</td>
+                    <td>good</td>
+                    <td><button class="btn btn-warning">update</button></td>
+                    <td> <button class="btn btn-danger">delet</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script src="js/crud.js"></script>
+    
+    </body>
+</html>
